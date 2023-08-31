@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-pink: #F48FB1;
+    --dark-pink: #EC407A;
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.link {
+    display: block;
+    color: #fff;
+    font-size: clamp(2em, 8vw, 7em);
+    padding: clamp(0.25em, 1vw, 1em) clamp(1em, 4vw, 4em);
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+    border-top: 1px solid #ffffff8e;
+    position: relative;
+}
+
+.link:hover:before {
+    width: 100%;
+}
+
+.link:before { 
+    content: "";
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    background: linear-gradient(to right, transparent, var(--dark-pink) var(--light-pink-percent), var(--light-pink));
+    transition: width 0.6s ease;
+}
+
+.link:nth-child(3) {
+    border-bottom: 1px solid #ffffff8e;
+}
